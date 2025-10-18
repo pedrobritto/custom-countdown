@@ -1,0 +1,35 @@
+---
+const { number } = Astro.props;
+---
+
+<div class="relative w-40 mx-auto">
+  <div
+    class="relative text-9xl font-bold bg-white text-neutral-800 my-6 leading-[1] border rounded-2xl border-neutral-200 py-12 mx-auto z-10">
+    {number}
+  </div>
+
+  <div
+    class={[
+      "text-9xl font-bold bg-white text-neutral-800 my-6 leading-[1] border rounded-2xl border-neutral-200 py-12 mx-auto",
+      "absolute top-1.5 left-0 w-full",
+      "shadow-sm",
+    ].join(" ")}>
+    {number}
+  </div>
+
+  <div
+    class={[
+      "text-9xl font-bold bg-white text-neutral-800 my-6 leading-[1] border rounded-2xl border-neutral-200 py-12 mx-auto",
+      "absolute top-1 left-0 w-full",
+    ].join(" ")}>
+    {number}
+  </div>
+
+  <div
+    class={[
+      "text-9xl font-bold bg-white text-neutral-800 my-6 leading-[1] border rounded-2xl border-neutral-200 py-12 mx-auto",
+      "absolute top-0.5 left-0 w-full",
+    ].join(" ")}>
+    {number}
+  </div>
+</div>

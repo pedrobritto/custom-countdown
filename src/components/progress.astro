@@ -1,0 +1,21 @@
+---
+
+---
+
+<div><span id="percentage"></span>%</div>
+
+<script>
+  const startingDate = new Date("2022-01-01");
+  const targetDate = new Date("2027-12-31");
+
+  const startTs = startingDate.getTime();
+  const targetTs = targetDate.getTime();
+
+  setInterval(() => {
+    const percentage = (Date.now() - startTs) / (targetTs - startTs);
+
+    const formattedPercentage = (percentage * 100).toFixed(6);
+
+    document.getElementById("percentage").textContent = formattedPercentage;
+  }, 1000);
+</script>
